@@ -442,6 +442,7 @@ p { line-height: 1.7; color: var(--text-secondary); }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  padding-bottom: 0.15em;
 }
 
 /* ── Subline ── */
