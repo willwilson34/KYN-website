@@ -344,11 +344,10 @@ p { line-height: 1.7; color: var(--text-secondary); }
   align-items: center;
   justify-content: center;
   min-height: 90vh;
-  padding: 120px 32px 88px;
+  padding: 160px 32px 88px;
   text-align: center;
   background: var(--surface-base);
   border-bottom: 1px solid var(--kyn-border);
-  overflow: hidden;
 }
 
 /* Grain texture — absolutely positioned SVG overlay */
@@ -423,10 +422,11 @@ p { line-height: 1.7; color: var(--text-secondary); }
   gap: 0;
   font-family: var(--font-heading);
   font-size: clamp(2.5rem, 6vw, 4rem);
-  line-height: 1.08;
+  line-height: 1.15;
   letter-spacing: -0.03em;
   max-width: 700px;
   margin-bottom: 20px;
+  padding-bottom: 0.15em;
 }
 
 .hero__headline-line1 {
@@ -442,7 +442,6 @@ p { line-height: 1.7; color: var(--text-secondary); }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  padding-bottom: 0.15em;
 }
 
 /* ── Subline ── */
