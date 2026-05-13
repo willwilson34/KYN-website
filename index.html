@@ -31,7 +31,7 @@
 
       <nav class="nav__links" aria-label="Primary navigation">
         <a href="#how-it-works" class="nav__link">How It Works</a>
-        <a href="#report-section" class="nav__link">Neighborhoods</a>
+        <a href="#browse-bar" class="nav__link">Neighborhoods</a>
         <a href="#email-section" class="nav__link">Early Access</a>
       </nav>
 
@@ -94,43 +94,7 @@
             list="neighborhood-suggestions"
           />
           <datalist id="neighborhood-suggestions">
-            <option value="Lincoln Park">
-            <option value="Wicker Park">
-            <option value="Logan Square">
-            <option value="River North">
-            <option value="Bucktown">
-            <option value="Wrigleyville">
-            <option value="Hyde Park">
-            <option value="Pilsen">
-            <option value="Andersonville">
-            <option value="Lakeview">
-            <option value="Old Town">
-            <option value="Gold Coast">
-            <option value="Streeterville">
-            <option value="South Loop">
-            <option value="West Loop">
-            <option value="Humboldt Park">
-            <option value="Bridgeport">
-            <option value="Ravenswood">
-            <option value="Rogers Park">
-            <option value="Uptown">
-            <option value="Downtown Eugene">
-            <option value="Whiteaker">
-            <option value="South Eugene">
-            <option value="Friendly Street">
-            <option value="Amazon District">
-            <option value="Fairmount">
-            <option value="Cal Young">
-            <option value="River Road">
-            <option value="Santa Clara">
-            <option value="Bethel">
-            <option value="Jefferson Westside">
-            <option value="Laurel Hill">
-            <option value="University District">
-            <option value="Hendricks Park">
-            <option value="Willamette Corridor">
-            <option value="Ferry Street Bridge">
-            <option value="Harlow">
+            <!-- Populated dynamically by app.js buildBrowseBar() to match active city -->
           </datalist>
           <button class="search-bar__btn" type="submit" id="search-btn">
             Search
@@ -204,7 +168,7 @@
           <div class="report__neighborhood-meta">
             <span class="report__badge report__badge--navy" id="report-city-badge">Chicago, IL</span>
             <span class="report__badge report__badge--green" id="report-trend-badge">
-              ↑ Trending up
+              ↑ High-rated
             </span>
             <span class="tag tag--accent" id="report-updated-tag">Updated Nov 2025</span>
           </div>
@@ -786,7 +750,8 @@
       </p>
 
       <!-- Form -->
-      <form class="email-form reveal" data-delay="300" id="email-capture-form" novalidate aria-label="Early access signup form">
+      <form class="email-form reveal" data-delay="300" id="email-capture-form" name="early-access" netlify novalidate aria-label="Early access signup form">
+        <input type="hidden" name="form-name" value="early-access" />
 
         <div class="email-form__row">
           <div class="form-field">
@@ -887,8 +852,8 @@
             <ul class="footer__links">
               <li><a href="#how-it-works" class="footer__link">How It Works</a></li>
               <li><a href="#email-section" class="footer__link">Early Access</a></li>
-              <li><a href="#report-section" class="footer__link">Neighborhood Reports</a></li>
-              <li><span class="footer__link footer__link--muted">Chrome Extension — Coming</span></li>
+              <li><a href="#browse-bar" class="footer__link">Neighborhood Reports</a></li>
+              <li><a href="KYN-extension.zip" download class="footer__link">Download Extension ↓</a></li>
               <li><a href="#" class="footer__link">Scout</a></li>
               <li><span class="footer__link footer__link--muted">API (Coming Soon)</span></li>
             </ul>

@@ -163,6 +163,17 @@ function buildBrowseBar() {
     dom.browseCitiesInner.appendChild(btn);
   });
 
+  // Sync datalist suggestions to active city
+  const datalist = document.getElementById('neighborhood-suggestions');
+  if (datalist) {
+    datalist.innerHTML = '';
+    neighborhoodData.filter(n => n.city === activeCity).forEach(n => {
+      const opt = document.createElement('option');
+      opt.value = n.name;
+      datalist.appendChild(opt);
+    });
+  }
+
   // Neighborhood pills for active city (right scrolling container)
   dom.browsePillsInner.innerHTML = '';
   neighborhoodData.filter(n => n.city === activeCity).forEach(n => {
